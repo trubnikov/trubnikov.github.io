@@ -97,6 +97,8 @@
 	background-size: cover;
 	transform: translate3d(0, 0, 0);
 	background-blend-mode: var(--blend-mode-1);
+	will-change: transform, opacity;
+
 }
 
 .glitch__img2 {
@@ -189,4 +191,15 @@
 		transform: translate3d(0, 0, 0);
 		clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 	}
+}
+
+@media (max-width: 768px) {
+    .dima {
+        --color-text: #333; /* Более контрастный цвет для мобильных */
+        --color-bg: #111; /* Темнее фон для лучшей видимости */
+        --color-link: #ffd700; /* Цвет ссылок, более заметный на мобильных */
+        --color-link-hover: #ffcc33;
+        --glitch-width: 100vw;
+        --glitch-height: 50vh; /* Меньше для экономии ресурсов */
+    }
 }
