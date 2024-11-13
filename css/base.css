@@ -128,15 +128,24 @@ a:focus {
     fill: currentColor;
 }
 
+
+
 /* Responsive Styles */
+
 @media (max-width: 768px) {
-    .content {
-        padding: 1rem;
-    }
-    .message {
-        font-size: 1em;
+    .content__text {
+        position: fixed; /* Фиксированная позиция для привязки к низу экрана */
+        bottom: 0; /* Перемещаем к нижней части экрана */
+        top: auto; /* Сбросим значение top */
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 1em; /* Добавим отступы для удобства чтения */
+        width: 100%; /* Растягиваем на всю ширину экрана */
+        font-size: 1.2em; /* Изменим размер шрифта для лучшего отображения на мобильных */
     }
 }
+
 
 @media (max-width: 55em) {
     .content {
