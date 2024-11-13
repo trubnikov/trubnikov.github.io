@@ -1,19 +1,19 @@
-/* Основные стили для базовой адаптивности */
+/* Global Reset */
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
+    font-size: 16px;
     background: #1d2121;
-    font-size: 16px; /* Базовый размер текста */
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    margin: 0;
-    color: #57585c;
     color: var(--color-text, #57585c);
     background-color: var(--color-bg, #fff);
     display: flex;
@@ -22,25 +22,28 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center; /* Центровка текста */
-    padding: 0 1rem; /* Отступы для мобильных */
+    padding: 0 1rem;
+    text-align: center;
 }
 
-/* Fade effect */
-.js body {
+/* Fade effect for initial load */
+body.js {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
-.js body.render {
+body.js.render {
     opacity: 1;
 }
 
-/* Page Loader */
-.js .loading::before {
+/* Page Loader Styles */
+.js .loading::before,
+.js .loading::after {
     content: '';
     position: fixed;
     z-index: 100000;
+}
+
+.js .loading::before {
     top: 0;
     left: 0;
     width: 100%;
@@ -49,28 +52,26 @@ body {
 }
 
 .js .loading::after {
-    content: '';
-    position: fixed;
-    z-index: 100000;
     top: 50%;
     left: 50%;
     width: 60px;
     height: 60px;
     margin: -30px 0 0 -30px;
-    pointer-events: none;
     border-radius: 50%;
-    opacity: 0.4;
     background: var(--color-link, #333);
-    animation: loaderAnim 0.7s linear infinite alternate forwards;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: loaderAnim 0.7s linear infinite alternate;
 }
 
 @keyframes loaderAnim {
     to {
         opacity: 1;
-        transform: scale3d(0.5, 0.5, 1);
+        transform: scale(0.5);
     }
 }
 
+/* Layout and Content */
 main {
     display: flex;
     justify-content: center;
@@ -88,18 +89,7 @@ main {
     min-height: 100vh;
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    .content {
-        padding: 1rem;
-    }
-
-    .message {
-        font-size: 1em; /* Увеличиваем размер текста */
-    }
-}
-
-/* Центровка и размеры для шапки и меню */
+/* Header and Menu */
 .codrops-header {
     display: flex;
     flex-direction: column;
@@ -120,19 +110,17 @@ main {
     margin-top: 0.5em;
 }
 
+/* Links and Icons */
 a {
-    text-decoration: none;
     color: var(--color-link, #333);
-    outline: none;
+    text-decoration: none;
 }
-
 a:hover,
 a:focus {
     color: var(--color-link-hover, #666);
     outline: none;
 }
 
-/* Icons */
 .icon {
     display: block;
     width: 1.5em;
@@ -140,26 +128,27 @@ a:focus {
     fill: currentColor;
 }
 
-/* Стили для адаптивности верхнего меню */
-@media screen and (max-width: 55em) {
+/* Responsive Styles */
+@media (max-width: 768px) {
     .content {
-        height: auto;
-        min-height: 0;
+        padding: 1rem;
     }
-
-    .codrops-header {
-        align-items: center;
+    .message {
+        font-size: 1em;
     }
+}
 
+@media (max-width: 55em) {
+    .content {
+        min-height: auto;
+    }
     .codrops-header__title {
-        padding-bottom: 0.25em;
         font-size: 1.25em;
+        padding-bottom: 0.25em;
     }
-
     .github {
         margin: 1em auto;
     }
-    
     .demos {
         text-align: center;
     }
