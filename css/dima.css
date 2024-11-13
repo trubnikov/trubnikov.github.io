@@ -41,6 +41,8 @@
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.1);
 }
 
+
+/*
 .content__text {
 	font-family: 'Lato', sans-serif;
 	position: absolute;
@@ -54,6 +56,23 @@
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.15);
 }
+*/ 
+
+.content__text {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    color: #000000;
+    font-size: 1.5em;
+    background-color: #efc453;
+    top: 5em;
+    right: 10vw;
+    max-width: 500px;
+    text-align: left;
+    font-weight: 400;
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.15);
+}
+
+
 .content__text2 {
 	font-family: 'Lato', sans-serif;
 	position: absolute;
