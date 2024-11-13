@@ -42,16 +42,6 @@
 }
 
 
-.content__title3 {
-	font-size: 7vw;
-	margin: 175em, 0,0, 0; 
-	position: absolute;
-        right: auto;
-	float: right;
-	font-family: 'Bebas Neue', sans-serif;
-	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.11);
-}
-
 
 /*
 .content__text {
