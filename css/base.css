@@ -128,26 +128,6 @@ a:focus {
     fill: currentColor;
 }
 
-/* Case Studies Section for Mobile */
-.case-studies {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-bg, #fff);
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-@media (min-width: 769px) {
-    .case-studies {
-        position: static;
-        box-shadow: none;
-    }
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .content {
