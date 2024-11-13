@@ -42,6 +42,17 @@
 }
 
 
+.content__title3 {
+	font-size: 10vw;
+	margin: 55vh, 0,0, 0; 
+	position: absolute;
+    right: auto;
+	float: right;
+	font-family: 'Bebas Neue', sans-serif;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.1);
+}
+
+
 /*
 .content__text {
 	font-family: 'Lato', sans-serif;
