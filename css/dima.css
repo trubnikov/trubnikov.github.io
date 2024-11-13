@@ -81,8 +81,8 @@
 	font-size: 1.5em;
 	top: 3em;
 	left: auto;
-	max-width: 500px;
-	text-align: left;
+	max-width: 700px;
+	text-align: centre;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
