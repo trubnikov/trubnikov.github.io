@@ -64,10 +64,11 @@
     position: absolute;
     color: #000000;
     font-size: 1.5em;
-    background-color: #efc453;
-    top: 5em;
-    right: 10vw;
+    top: 6em;
+    right: auto;
+	padding: 10px;
     max-width: 500px;
+	background-color: #efc453;
     text-align: left;
     font-weight: 400;
     animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.15);
@@ -80,6 +81,21 @@
     color: #fff;
 	font-size: 1.5em;
 	top: 3em;
+	left: auto;
+	max-width: 700px;
+	text-align: centre;
+	font-weight: 400;
+	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
+
+.content__text3 {
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+    color: #fff;
+	font-size: 1.5em;
+	background-color: #ed2121;
+	bottom: 5em;
+	padding: 10px;
 	left: auto;
 	max-width: 700px;
 	text-align: centre;
