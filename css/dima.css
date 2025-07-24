@@ -53,7 +53,7 @@
 	top: 5em;
 	right: 10vw; 
 	max-width: 500px;
-	text-align: lefts;
+        text-align: left;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.15);
 }
@@ -83,7 +83,7 @@
 	top: 3em;
 	left: auto;
 	max-width: 700px;
-	text-align: centre;
+        text-align: center;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
@@ -98,7 +98,7 @@
 	padding: 10px;
 	left: auto;
 	max-width: 700px;
-	text-align: centre;
+        text-align: center;
 	font-weight: 400;
 	animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
