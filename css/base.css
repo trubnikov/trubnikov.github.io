@@ -1,3 +1,7 @@
+/* ==========================================================================
+   Base Styles - Reset and Foundation
+   ========================================================================== */
+
 /* Global Reset */
 *,
 *::before,
@@ -26,11 +30,16 @@ body {
     text-align: center;
 }
 
+/* ==========================================================================
+   Page Load States
+   ========================================================================== */
+
 /* Fade effect for initial load */
 body.js {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 body.js.render {
     opacity: 1;
 }
@@ -71,7 +80,10 @@ body.js.render {
     }
 }
 
-/* Layout and Content */
+/* ==========================================================================
+   Layout Structure
+   ========================================================================== */
+
 main {
     display: flex;
     justify-content: center;
@@ -89,7 +101,10 @@ main {
     min-height: 100vh;
 }
 
-/* Header and Menu */
+/* ==========================================================================
+   Header Components
+   ========================================================================== */
+
 .codrops-header {
     display: flex;
     flex-direction: column;
@@ -110,11 +125,15 @@ main {
     margin-top: 0.5em;
 }
 
-/* Links and Icons */
+/* ==========================================================================
+   Links and Interactive Elements
+   ========================================================================== */
+
 a {
     color: var(--color-link, #333);
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     color: var(--color-link-hover, #666);
@@ -128,36 +147,38 @@ a:focus {
     fill: currentColor;
 }
 
-
-
-/* Responsive Styles */
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
 
 @media (max-width: 768px) {
     .content__text {
-        position: fixed; /* Фиксированная позиция для привязки к низу экрана */
-        bottom: 0; /* Перемещаем к нижней части экрана */
-        top: auto; /* Сбросим значение top */
+        position: fixed;
+        bottom: 0;
+        top: auto;
         right: 0;
         left: 0;
         text-align: center;
-        padding: 1em; /* Добавим отступы для удобства чтения */
-        width: 100%; /* Растягиваем на всю ширину экрана */
-        font-size: 1.2em; /* Изменим размер шрифта для лучшего отображения на мобильных */
+        padding: 1em;
+        width: 100%;
+        font-size: 1.2em;
     }
 }
-
 
 @media (max-width: 55em) {
     .content {
         min-height: auto;
     }
+    
     .codrops-header__title {
         font-size: 1.25em;
         padding-bottom: 0.25em;
     }
+    
     .github {
         margin: 1em auto;
     }
+    
     .demos {
         text-align: center;
     }
